@@ -11,10 +11,10 @@ public class task_3 {
         
         System.out.print("Введите первое число: ");
         double number1 = reader.nextDouble();
-        System.out.print("\nВведите второе число: ");
+        System.out.print("Введите второе число: ");
         double number2 = reader.nextDouble();
 
-        System.out.print("\nВведите оператор (+, -, *, /): ");
+        System.out.print("Введите оператор (+, -, *, /): ");
         char operator = reader.next().charAt(0);
         switch(operator) {
             case '+': result = number1 + number2;
@@ -28,6 +28,11 @@ public class task_3 {
         default:  System.out.printf("Ошибка ввода. Запустите программу повторно");
         return;
     }
-    System.out.print("\nРезультат " + number1 + " " + operator + " " + number2 + " = " + result);  
-}
+    if(number2 == 0 & operator == '/'){
+        System.out.print("Ошибка. Нельзя делить на 0");  
+    }
+    else{
+        System.out.print("\nРезультат " + number1 + " " + operator + " " + number2 + " = " + result);  
+    }
+    }
 }
